@@ -1,0 +1,7 @@
+Folder structure
+
+-src
+	-pages
+		-PageName
+			-PageName.js
+			-PageName.scss

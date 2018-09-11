@@ -1,0 +1,7 @@
+Folder structure
+
+-src
+	-components
+		-ComponentA
+			-ComponentA.js
+			-ComponentA.scss

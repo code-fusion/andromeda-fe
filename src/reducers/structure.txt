@@ -1,0 +1,9 @@
+Folder structure:
+
+-src
+	-reducers
+		-reducerA
+			-reducerA.js => The reducer itself
+			-actions.js => all the actions creators
+			-types.js => all the types
+			-async.js => the async function (redux-thunk)

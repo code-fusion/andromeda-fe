@@ -16,14 +16,12 @@ $breakpoints: (
 // $warm-grey: #979797;
 
 
-/// Breakpoints manager
-/// @param {String} $point - Breakpoint name
 @mixin respond-to($point) {
   @if map-has-key($breakpoints, $point) {
     @media (max-width: map-get($breakpoints, $point)) {
       @content;
     }
   } @else {
-    @warn 'Could not find `#{$breakpoint}` in both local ($tweakpoints) and global ($breakpoints) contexts. Media block omitted.';
+    @warn 'Could not find `#{$breakpoint}`;
   }
 }

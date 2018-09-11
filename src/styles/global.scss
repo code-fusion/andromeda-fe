@@ -1,0 +1,29 @@
+//Define breakpoints for media queries
+$breakpoints: (
+  'mobile': 360px,
+  'mobile-ios': 375px,
+  'tablet': 768px,
+  'tablet-landscape': 1024px,
+  'desktop': 1280px,
+  'desktopLarge': 1440px,
+  'wide': 1600px,
+  'full': 1920px,
+  'jumbo': 2000px,
+);
+
+//Define colors of the page
+//example
+// $warm-grey: #979797;
+
+
+/// Breakpoints manager
+/// @param {String} $point - Breakpoint name
+@mixin respond-to($point) {
+  @if map-has-key($breakpoints, $point) {
+    @media (max-width: map-get($breakpoints, $point)) {
+      @content;
+    }
+  } @else {
+    @warn 'Could not find `#{$breakpoint}` in both local ($tweakpoints) and global ($breakpoints) contexts. Media block omitted.';
+  }
+}

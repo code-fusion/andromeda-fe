@@ -2,6 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux';
+import {BrowserRouter} from 'react-router-dom';
 
 import './reset.css';
 import './index.scss';
@@ -13,7 +14,9 @@ const rootElement = document.getElementById('root');
 
 render(
 	<Provider store={store}>
-		<App />
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
 	</Provider>
 	, rootElement);
 

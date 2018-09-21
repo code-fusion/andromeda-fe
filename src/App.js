@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom';
 import PrivateRoute from './utilComponents/PrivateRoute';
-
 import routes from './pages/routes';
 
 class App extends Component {
